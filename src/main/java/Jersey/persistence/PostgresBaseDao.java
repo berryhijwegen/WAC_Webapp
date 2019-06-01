@@ -25,7 +25,7 @@ public class PostgresBaseDao {
         Connection result = null;
 
         try {
-            String url = "jdbc:postgres://rtzxixexiyefib:9fb8dcaf0a2c979fbd8022a97d8cd9c6c7a97eb6f76588edbe9255b8b6c34936@ec2-54-246-92-116.eu-west-1.compute.amazonaws.com:5432/dff1rjrnshphre";
+            String url = "jdbc:postgresql://rtzxixexiyefib:9fb8dcaf0a2c979fbd8022a97d8cd9c6c7a97eb6f76588edbe9255b8b6c34936@ec2-54-246-92-116.eu-west-1.compute.amazonaws.com:5432/dff1rjrnshphre";
             result = DriverManager.getConnection(url);
         } catch (Exception ex) {
             throw new RuntimeException(ex);
