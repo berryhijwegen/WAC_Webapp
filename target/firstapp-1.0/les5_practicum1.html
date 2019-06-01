@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Title</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/les5style.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    </head>
+    <body>
+    <div id="frame">
+        <div id="myLocation">
+            <h3><i class="fas fa-location-arrow"></i> Mijn locatie</h3>
+            <table>
+                <tr>
+                    <td>Landcode:</td>
+                    <td id="countryCode"></td>
+                </tr>
+                <tr>
+                    <td>Land:</td>
+                    <td id="country"></td>
+                </tr>
+                <tr>
+                    <td>Regio:</td>
+                    <td id="region"></td>
+                </tr>
+                <tr>
+                    <td>Stad:</td>
+                    <td id="city"></td>
+                </tr>
+                <tr>
+                    <td>Postcode:</td>
+                    <td id="zip"></td>
+                </tr>
+                <tr>
+                    <td>Latitude:</td>
+                    <td id="lat"></td>
+                </tr>
+                <tr>
+                    <td>Longitude:</td>
+                    <td id="lon"></td>
+                </tr>
+                <tr>
+                    <td>IP:</td>
+                    <td id="ip"></td>
+                </tr>
+            </table>
+        </div>
+        <div id="weatherInfo">
+<!--            <i class="fas fa-cloud-sun-rain"></i>-->
+            <h3 id='cityHeader'> Het weer in</h3>
+            <table>
+                <tr>
+                    <td>Temperatuur:</td>
+                    <td id="temp"></td>
+                </tr>
+                <tr>
+                    <td>Luchtvochtigheid:</td>
+                    <td id="humidity"></td>
+                </tr>
+                <tr>
+                    <td>Windsnelheid:</td>
+                    <td id="speed"></td>
+                </tr>
+                <tr>
+                    <td>Windrichting:</td>
+                    <td id="deg"></td>
+                </tr>
+                <tr>
+                    <td>Zonsopgang:</td>
+                    <td id="sunrise"></td>
+                </tr>
+                <tr>
+                    <td>Zonsondergang:</td>
+                    <td id="sunset"></td>
+                </tr>
+            </table>
+        </div>
+        <div id="countryList">
+            <h3>
+                <i class="fas fa-sun"></i>
+                Beschikbare vakantiebestemmingen
+                <i class="fas fa-plus-square" data-toggle='modal' data-target='#exampleModal'></i>
+            </h3>
+            <div style="overflow-x:auto;">
+                <table>
+                    <tr>
+                        <th>
+                            Land
+                        </th>
+                        <th>
+                            Hoofstad
+                        </th>
+                        <th>
+                            Regio
+                        </th>
+                        <th>
+                            Oppervlakte
+                        </th>
+                        <th>
+                            Inwoners
+                        </th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Delete country</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Are you sure you want to delete?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button type="button" id="actionButton" class="btn btn-primary">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/les5.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    </body>
+</html>

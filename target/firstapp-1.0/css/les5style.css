@@ -1,0 +1,69 @@
+body {
+    background: #D7D5CD;
+}
+
+h3 {
+    color: white;
+    background: #838383;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    font-family: 'Roboto Slab', cursive;
+    font-size: 1.5em;
+}
+
+#countryList table {
+    background: #B1ADA5;
+    width: 100%;
+}
+
+#countryList table tr:first-child {
+    text-align: left;
+    border-bottom: 2px solid black;
+}
+
+th, td {
+    padding: 5px;
+}
+tr:hover  {
+    color: white;
+}
+
+tr i.fa-trash-alt:hover {
+    color: red;
+}
+
+tr i.fa-edit:hover {
+    color: orange;
+}
+
+.fa-plus-square {
+    color:black;
+    float:right;
+    margin-right: 10px;
+    margin-top: 1px;
+}
+
+h3 i.fa-plus-square:hover {
+    color: white;
+}
+
+#myLocation { grid-area: left; }
+#weatherInfo { grid-area: right; }
+#countryList { grid-area: bottom; }
+
+@media only screen and (min-width: 700px) {
+
+    #frame {
+        display: grid;
+        grid-template-areas:
+                'left left left right right right'
+                'bottom bottom bottom bottom bottom bottom';
+        grid-gap: 10px;
+        padding: 10px;
+    }
+
+    #frame > div {
+        padding: 20px 0;
+    }
+}
