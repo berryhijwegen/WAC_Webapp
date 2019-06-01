@@ -62,7 +62,7 @@ function showWeather(latitude, longitude, city){
 }
 
 function loadCountries(){
-    fetch('https://localhost:8443/Rest_Service/countries')
+    fetch('/Rest_Service/countries')
         .then(function(response) {
             return response.json()
         })
@@ -98,7 +98,7 @@ function addonClick(){
                 "requestedCountry": currentElement.find(">:first-child").text(),
             };
 
-            fetch('http://localhost:1337/Rest_Service/countries')
+            fetch('/Rest_Service/countries')
                 .then(function(response) {
                     return response.json()
                 })
@@ -154,7 +154,7 @@ function addDeleteandUpdateListener(){
         if ($('.fa-trash-alt').length && $('.fa-edit').length) {
             $('.fa-trash-alt').click(function () {
                 let countryName = $(this).closest('tr').find("span").text();
-                fetch('http://localhost:1337/Rest_Service/countries')
+                fetch('/Rest_Service/countries')
                     .then(function(response) {
                         return response.json()
                     })
@@ -172,7 +172,7 @@ function addDeleteandUpdateListener(){
 
             $('.fa-edit').click(function () {
                 let countryName = $(this).closest('tr').find("span").text();
-                fetch('https://localhost:8443/Rest_Service/countries')
+                fetch('/Rest_Service/countries')
                     .then(function(response) {
                         return response.json()
                     })
@@ -262,7 +262,7 @@ function addDeleteandUpdateListener(){
 
     $('#actionButton').click(function () {
         if($(this).text() === "Delete"){
-            fetch('http://localhost:1337/Rest_Service/countries/' + id, getFetchOptions('DELETE'))
+            fetch('/Rest_Service/countries/' + id, getFetchOptions('DELETE'))
                 .then(function (response) {
                     if(response.ok){
                         console.log("Country deleted!");
