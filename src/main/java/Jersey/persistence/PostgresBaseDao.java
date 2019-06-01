@@ -25,13 +25,9 @@ public class PostgresBaseDao {
         Connection result = null;
 
         try {
-//            InitialContext ic = new InitialContext();
-//            DataSource datasource = (DataSource) ic.lookup("java:comp/env/jdbc/PostgresDS");
-//
-//            result = datasource.getConnection();
-            String url = "jdbc:postgresql://localhost:5432/worlddb";
-            String user = "postgres";
-            String password = "123";
+            String url = "jdbc:postgres://rtzxixexiyefib:9fb8dcaf0a2c979fbd8022a97d8cd9c6c7a97eb6f76588edbe9255b8b6c34936@ec2-54-246-92-116.eu-west-1.compute.amazonaws.com:5432/dff1rjrnshphre";
+            String user = "rtzxixexiyefib";
+            String password = "9fb8dcaf0a2c979fbd8022a97d8cd9c6c7a97eb6f76588edbe9255b8b6c34936";
             result = DriverManager.getConnection(url, user, password);
         } catch (Exception ex) {
             throw new RuntimeException(ex);
